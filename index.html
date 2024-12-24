@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part-Time Job Search and Training Agency">
+  <title>Job Search & Training Agency</title>
+  <style>
+      /* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5d9d9;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header nav .logo h1 {
+  margin-left: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #ff6600;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section#home {
+  background-color: rgb(6, 255, 243);;
+  color: #fff;
+  text-align: center;
+}
+
+section#home .intro {
+  padding: 50px 0;
+}
+
+.cta-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e65c00;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.job-list, .training-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.job-card, .training-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover, .training-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.apply-btn, .enroll-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover, .enroll-btn:hover {
+  background-color: #e65c00;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact input, #contact textarea {
+  width: 80%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contact button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #e65c00;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(111, 243, 236);;
+  color: #fff;
+}
+
+  </style>
+  <script>
+      // Handle the contact form submission (example with a simple alert)
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let message = document.getElementById('message').value;
+  
+  if (name && email && message) {
+    alert('Thank you for your message, ' + name + '! We will get back to you soon.');
+    // You could add functionality here to send the data to a server if necessary
+    document.getElementById('contact-form').reset(); // Reset the form after submission
+  } else {
+    alert('Please fill out all fields.');
+  }
+});
+
+  </script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>JobTrain Agency</h1>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#jobs">Job Listings</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="intro">
+      <h2>Your Path to a Better Future Starts Here</h2>
+      <p>Find part-time job opportunities and enhance your skills with our training programs.</p>
+      <a href="#jobs" class="cta-btn">Browse Jobs</a>
+    </div>
+  </section>
+
+  <!-- Job Listings Section -->
+  <section id="jobs">
+    <h2>Available Part-Time Jobs</h2>
+    <div class="job-list">
+      <div class="job-card">
+        <h3>Data Entry Clerk</h3>
+        <p>Location: Remote</p>
+        <a href="#" class="apply-btn">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Customer Support</h3>
+        <p>Location: Remote</p>
+      
+        <a href="#" class="apply-btn">Apply Now</a>
+      </div>
+      <div class="job-card">
+        <h3>Freelance Writer</h3>
+        <p>Location: Remote</p>
+        <a href="#" class="apply-btn">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Section -->
+  <section id="training">
+    <h2>Training Programs</h2>
+    <div class="training-list">
+      <div class="training-card">
+        <h3>Web Development</h3>
+        <p>Learn how to build websites from scratch.</p>
+        <a href="#" class="enroll-btn">Enroll Now</a>
+      </div>
+      <div class="training-card">
+        <h3>Digital Marketing</h3>
+        <p>Master the skills to run online marketing campaigns.</p>
+        <a href="#" class="enroll-btn">Enroll Now</a>
+      </div>
+      <div class="training-card">
+        <h3>Data Analysis</h3>
+        <p>Become a pro at interpreting and visualizing data.</p>
+        <a href="#" class="enroll-btn">Enroll Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 JobTrain Agency. All rights reserved.</p>
+  </footer>
+</body>
+</html>
